@@ -1,5 +1,7 @@
 # 63130693-AndroidProgramming
-Các bài tập lập trình android
+## Nơi lưu các bài tập lập trình android
+---
+### Lập trình với android studio
 
   - 	Ex1_Hello: Tạo máy ảo, chạy thử ứng dụng HelloWorld
   - 	Ex2_LinearLayout: Tạo ứng dụng thử nghiệm, demo bố cục màn hình Linear
