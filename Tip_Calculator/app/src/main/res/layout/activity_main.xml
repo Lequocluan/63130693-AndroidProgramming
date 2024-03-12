@@ -8,7 +8,7 @@
 
     <EditText
         android:hint="Vui long nhap mot so de tinh tien tip"
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edtTien"
         android:layout_width="276dp"
         android:layout_height="55dp"
         android:layout_marginStart="67dp"
@@ -29,7 +29,7 @@
         android:layout_marginEnd="129dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber">
+        app:layout_constraintTop_toBottomOf="@+id/edtTien">
 
         <RadioButton
             android:id="@+id/rdb13"
@@ -38,30 +38,44 @@
             android:text="13%" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rdb15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15%" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rdb18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="18%" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnTinh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="190dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="16dp"
-        android:background="none"
+        android:background="@color/white"
         android:text="CALCULATOR YOUR TIP"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/tvThongBao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="183dp"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTinh" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
