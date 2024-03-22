@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edt1"
         android:layout_width="229dp"
         android:layout_height="41dp"
         android:layout_marginStart="31dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvA" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/edt2"
         android:layout_width="232dp"
         android:layout_height="42dp"
         android:layout_marginStart="34dp"
@@ -52,7 +52,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvB"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/edt1" />
 
     <TextView
         android:id="@+id/tvKq"
@@ -63,10 +63,10 @@
         android:gravity="center"
         android:text="Kết Quả"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt2" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/edtKQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -74,7 +74,7 @@
         android:ems="10"
         android:inputType="none"
         app:layout_constraintStart_toEndOf="@+id/tvKq"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt2" />
 
     <Button
         android:id="@+id/btnTao"
@@ -89,20 +89,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+        app:layout_constraintTop_toBottomOf="@+id/edtKQ" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imbtnCong"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="88dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/add"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTao" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTao"
+        android:onClick="calculate"/>
 
     <ImageButton
-        android:id="@+id/imbt7"
+        android:id="@+id/imbtnNhan"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="88dp"
@@ -111,11 +112,12 @@
         android:src="@drawable/nhan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintTop_toBottomOf="@+id/imbtnCong"
+        app:layout_constraintVertical_bias="0.034"
+        android:onClick="calculate"/>
 
     <ImageButton
-        android:id="@+id/imbt8"
+        android:id="@+id/imbtnChia"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="35dp"
@@ -124,11 +126,12 @@
         android:src="@drawable/chia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imbt7"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        app:layout_constraintStart_toEndOf="@+id/imbtnNhan"
+        app:layout_constraintTop_toBottomOf="@+id/imbtnTru"
+        android:onClick="calculate"/>
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imbtnTru"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="35dp"
@@ -137,7 +140,7 @@
         android:src="@drawable/tru"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.097"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
-        app:layout_constraintTop_toBottomOf="@+id/btnTao" />
-
+        app:layout_constraintStart_toEndOf="@+id/imbtnCong"
+        app:layout_constraintTop_toBottomOf="@+id/btnTao"
+        android:onClick="calculate"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
