@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ManHinhAppBMI extends JFrame {
 
@@ -30,7 +32,7 @@ public class ManHinhAppBMI extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
-		panel.setBounds(70, 31, 247, 125);
+		panel.setBounds(49, 30, 268, 129);
 		contentPane.add(panel);
 		
 		JLabel lblNewLabel = new JLabel("Cân nặng");
@@ -54,11 +56,25 @@ public class ManHinhAppBMI extends JFrame {
 		panel.add(txtChieucao);
 		
 		JButton btnClearCannang = new JButton("x");
-		btnClearCannang.setBounds(188, 26, 39, 20);
+		btnClearCannang.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnClearCannang.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtCannang.setText(null);
+				txtCannang.requestFocus();
+			}
+		});
+		btnClearCannang.setBounds(188, 20, 53, 31);
 		panel.add(btnClearCannang);
 		
 		JButton btnClaerChieucao = new JButton("x");
-		btnClaerChieucao.setBounds(188, 75, 39, 20);
+		btnClaerChieucao.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtChieucao.setText(null);
+				txtChieucao.requestFocus();
+			}
+		});
+		btnClaerChieucao.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnClaerChieucao.setBounds(188, 71, 53, 31);
 		panel.add(btnClaerChieucao);
 		
 		JButton btnTinh = new JButton("Tính BMI");
@@ -92,5 +108,7 @@ public class ManHinhAppBMI extends JFrame {
 		txtThongbao.setBounds(27, 65, 188, 37);
 		panel_1.add(txtThongbao);
 		txtThongbao.setColumns(10);
+	}
+		
 	}
 }
