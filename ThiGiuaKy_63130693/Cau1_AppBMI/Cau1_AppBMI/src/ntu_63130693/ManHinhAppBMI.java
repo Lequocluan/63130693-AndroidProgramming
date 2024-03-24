@@ -14,10 +14,10 @@ public class ManHinhAppBMI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtCannang;
+	private JTextField txtChieucao;
+	private JTextField txtKQ;
+	private JTextField txtThongbao;
 
 	public ManHinhAppBMI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,33 +43,33 @@ public class ManHinhAppBMI extends JFrame {
 		lblChiuCao.setBounds(10, 70, 60, 20);
 		panel.add(lblChiuCao);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(92, 21, 86, 31);
-		panel.add(textField);
+		txtCannang = new JTextField();
+		txtCannang.setColumns(10);
+		txtCannang.setBounds(92, 21, 86, 31);
+		panel.add(txtCannang);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(92, 71, 86, 31);
-		panel.add(textField_1);
+		txtChieucao = new JTextField();
+		txtChieucao.setColumns(10);
+		txtChieucao.setBounds(92, 71, 86, 31);
+		panel.add(txtChieucao);
 		
-		JButton btnNewButton = new JButton("x");
-		btnNewButton.setBounds(188, 26, 39, 20);
-		panel.add(btnNewButton);
+		JButton btnClearCannang = new JButton("x");
+		btnClearCannang.setBounds(188, 26, 39, 20);
+		panel.add(btnClearCannang);
 		
-		JButton btnNewButton_1 = new JButton("x");
-		btnNewButton_1.setBounds(188, 75, 39, 20);
-		panel.add(btnNewButton_1);
+		JButton btnClaerChieucao = new JButton("x");
+		btnClaerChieucao.setBounds(188, 75, 39, 20);
+		panel.add(btnClaerChieucao);
 		
-		JButton btnNewButton_2 = new JButton("Tính BMI");
-		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btnNewButton_2.setBounds(49, 186, 169, 28);
-		contentPane.add(btnNewButton_2);
+		JButton btnTinh = new JButton("Tính BMI");
+		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnTinh.setBounds(49, 186, 169, 28);
+		contentPane.add(btnTinh);
 		
-		JButton btnNewButton_3 = new JButton("Reset");
-		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btnNewButton_3.setBounds(228, 189, 89, 23);
-		contentPane.add(btnNewButton_3);
+		JButton btnReset = new JButton("Reset");
+		btnReset.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnReset.setBounds(228, 189, 89, 23);
+		contentPane.add(btnReset);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(70, 237, 247, 113);
@@ -81,16 +81,16 @@ public class ManHinhAppBMI extends JFrame {
 		lblNewLabel_1.setBounds(27, 11, 69, 43);
 		panel_1.add(lblNewLabel_1);
 		
-		textField_2 = new JTextField();
-		textField_2.setEditable(false);
-		textField_2.setBounds(102, 8, 86, 46);
-		panel_1.add(textField_2);
-		textField_2.setColumns(10);
+		txtKQ = new JTextField();
+		txtKQ.setEditable(false);
+		txtKQ.setBounds(102, 8, 86, 46);
+		panel_1.add(txtKQ);
+		txtKQ.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setEditable(false);
-		textField_3.setBounds(27, 65, 188, 37);
-		panel_1.add(textField_3);
-		textField_3.setColumns(10);
+		txtThongbao = new JTextField();
+		txtThongbao.setEditable(false);
+		txtThongbao.setBounds(27, 65, 188, 37);
+		panel_1.add(txtThongbao);
+		txtThongbao.setColumns(10);
 	}
 }
