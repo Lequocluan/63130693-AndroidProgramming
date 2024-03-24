@@ -26,15 +26,15 @@ public class ManHinhAppBMI extends JFrame {
 	private JTextField txtThongbao;
 
 	public ManHinhAppBMI() {
-		setBackground(new Color(255, 0, 255));
 		setTitle("BMI CALCULATOR APP");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 400, 427);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		setBounds(100, 100, 400, 427);
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setBackground(new Color(255, 192, 203)); // Màu hồng
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+		
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
@@ -62,26 +62,27 @@ public class ManHinhAppBMI extends JFrame {
 		panel.add(txtChieucao);
 		
 		JButton btnClearCannang = new JButton("x");
-		btnClearCannang.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnClearCannang.setFont(new Font("Tahoma", Font.BOLD, 13));
+		// Đặt font chữ đậm
+		btnClearCannang.setForeground(Color.RED); // Đặt màu chữ là đỏ
+		btnClearCannang.setBorderPainted(false);
+		btnClearCannang.setContentAreaFilled(false);
 		btnClearCannang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtCannang.setText(null);
 				txtCannang.requestFocus();
 			}
 		});
-		btnClearCannang.setBounds(188, 20, 53, 31);
+		btnClearCannang.setBounds(188, 21, 53, 31);
 		panel.add(btnClearCannang);
 		
-		JButton btnClaerChieucao = new JButton("x");
-		btnClaerChieucao.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				txtChieucao.setText(null);
-				txtChieucao.requestFocus();
-			}
-		});
-		btnClaerChieucao.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnClaerChieucao.setBounds(188, 71, 53, 31);
-		panel.add(btnClaerChieucao);
+		JButton btnClearChieucao = new JButton("x");
+		btnClearChieucao.setForeground(Color.RED);
+		btnClearChieucao.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnClearChieucao.setContentAreaFilled(false);
+		btnClearChieucao.setBorderPainted(false);
+		btnClearChieucao.setBounds(188, 70, 53, 31);
+		panel.add(btnClearChieucao);
 		
 		JButton btnTinh = new JButton("Tính BMI");
 		btnTinh.addActionListener(new ActionListener() {
@@ -113,17 +114,23 @@ public class ManHinhAppBMI extends JFrame {
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("<html><div style='text-align: center;'>Chỉ số BMI<br> của bạn:<div></html>");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(27, 11, 69, 43);
 		panel_1.add(lblNewLabel_1);
 		
 		txtKQ = new JTextField();
+		txtKQ.setFont(new Font("Tahoma", Font.BOLD, 13));
 		txtKQ.setEditable(false);
 		txtKQ.setBounds(102, 8, 86, 46);
 		panel_1.add(txtKQ);
 		txtKQ.setColumns(10);
 		
 		txtThongbao = new JTextField();
+		txtThongbao.setEditable(false);
+		txtThongbao.setFont(new Font("Tahoma", Font.BOLD, 13)); // Đặt font, in đậm, kích thước 13
+		txtThongbao.setForeground(Color.BLACK); // Đặt màu chữ là đen
+		txtThongbao.setHorizontalAlignment(JTextField.CENTER); // Căn giữa nội dung của vùng văn bản
+
 		txtThongbao.setBounds(0, 81, 247, 32);
 		panel_1.add(txtThongbao);
 		txtThongbao.setColumns(10);
@@ -157,18 +164,16 @@ public class ManHinhAppBMI extends JFrame {
 			
 			//xử lý thông báo tình trạng cơ thể dựa vào chỉ số BMI
 			if(bmi < 18.5) {
-				txtThongbao.setText("bạn đang ở trạng thái thiếu cân" );
+				txtThongbao.setText("Bạn đang ở trạng thái thiếu cân" );
 			}else if(bmi < 25) {
-				txtThongbao.setText("bạn đang ở trạng thái bình thường");
+				txtThongbao.setText("Bạn đang ở trạng thái bình thường");
 			}else if(bmi <30) {
-				txtThongbao.setText("bạn đang ở trạng thái thừa cân");
+				txtThongbao.setText("Bạn đang ở trạng thái thừa cân");
 			}else if(bmi >30) {
-				txtThongbao.setText("bạn đang ở trạng thái béo phì");
+				txtThongbao.setText("Bạn đang ở trạng thái béo phì");
 			}
 		}catch(NumberFormatException  ex) {
 			JOptionPane.showMessageDialog(this, "Cân nặng và chiều cao phải là số.");
 		}
-			
-			
 	}
 }
