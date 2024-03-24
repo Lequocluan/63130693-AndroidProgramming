@@ -138,14 +138,15 @@ public class ManHinhAppBMI extends JFrame {
 			return;
 		}
 
-		if(str_Chieucao.equals("0")) {
-			JOptionPane.showMessageDialog(this, "Chiều cao không được bằng 0");
-			return;
-		}
+		
 		//chuyển đổi từ dạng chuỗi sang kiểu double
 			Double Cannang = Double.parseDouble(str_Cannang);
 			Double Chieucao = Double.parseDouble(str_Chieucao);
-				
+		
+			if(Chieucao==0) {
+				JOptionPane.showMessageDialog(this, "Chiều cao không được bằng 0");
+				return;
+			}
 			//tính BMI
 			float bmi = (float)(Cannang/(Chieucao*Chieucao));
 			txtKQ.setText(String.format("%.2f", bmi));
