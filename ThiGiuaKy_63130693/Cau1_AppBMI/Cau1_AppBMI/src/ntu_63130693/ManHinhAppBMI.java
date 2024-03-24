@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
+import java.awt.Color;
 
 public class ManHinhAppBMI extends JFrame {
 
@@ -25,6 +26,8 @@ public class ManHinhAppBMI extends JFrame {
 	private JTextField txtThongbao;
 
 	public ManHinhAppBMI() {
+		setBackground(new Color(255, 0, 255));
+		setTitle("BMI CALCULATOR APP");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 400, 427);
 		contentPane = new JPanel();
@@ -139,7 +142,8 @@ public class ManHinhAppBMI extends JFrame {
 		}
 
 		
-		//chuyển đổi từ dạng chuỗi sang kiểu double
+		try {
+			//chuyển đổi từ dạng chuỗi sang kiểu double
 			Double Cannang = Double.parseDouble(str_Cannang);
 			Double Chieucao = Double.parseDouble(str_Chieucao);
 		
@@ -150,6 +154,20 @@ public class ManHinhAppBMI extends JFrame {
 			//tính BMI
 			float bmi = (float)(Cannang/(Chieucao*Chieucao));
 			txtKQ.setText(String.format("%.2f", bmi));
+			
+			//xử lý thông báo tình trạng cơ thể dựa vào chỉ số BMI
+			if(bmi < 18.5) {
+				txtThongbao.setText("bạn đang ở trạng thái thiếu cân" );
+			}else if(bmi < 25) {
+				txtThongbao.setText("bạn đang ở trạng thái bình thường");
+			}else if(bmi <30) {
+				txtThongbao.setText("bạn đang ở trạng thái thừa cân");
+			}else if(bmi >30) {
+				txtThongbao.setText("bạn đang ở trạng thái béo phì");
+			}
+		}catch(NumberFormatException  ex) {
+			JOptionPane.showMessageDialog(this, "Cân nặng và chiều cao phải là số.");
+		}
 			
 			
 	}
