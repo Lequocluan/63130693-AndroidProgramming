@@ -148,7 +148,7 @@ public class ManHinhAppBMI extends JFrame {
 				
 			//tính BMI
 			float bmi = (float)(Cannang/(Chieucao*Chieucao));
-			txtKQ.setText(String.valueOf(bmi));
+			txtKQ.setText(String.format("%.2f", bmi));
 			
 			
 	}
