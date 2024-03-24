@@ -52,12 +52,12 @@ public class ManHinhAppBMI extends JFrame {
 		panel.add(lblChieuCao);
 		
 		txtCannang = new JTextField();
-		txtCannang.setColumns(10);
+		txtCannang.setColumns(10);txtCannang.setBorder(null);
 		txtCannang.setBounds(92, 21, 86, 31);
 		panel.add(txtCannang);
 		
 		txtChieucao = new JTextField();
-		txtChieucao.setColumns(10);
+		txtChieucao.setColumns(10);txtChieucao.setBorder(null);
 		txtChieucao.setBounds(92, 71, 86, 31);
 		panel.add(txtChieucao);
 		
@@ -122,13 +122,13 @@ public class ManHinhAppBMI extends JFrame {
 		
 		txtKQ = new JTextField();
 		txtKQ.setFont(new Font("Tahoma", Font.BOLD, 13));
-		txtKQ.setEditable(false);
+		txtKQ.setEditable(false);txtKQ.setBorder(null);
 		txtKQ.setBounds(102, 8, 86, 46);
 		panel_1.add(txtKQ);
 		txtKQ.setColumns(10);
 		
 		txtThongbao = new JTextField();
-		txtThongbao.setEditable(false);
+		txtThongbao.setEditable(false);txtThongbao.setBorder(null);
 		txtThongbao.setFont(new Font("Tahoma", Font.BOLD, 13)); // Đặt font, in đậm, kích thước 13
 		txtThongbao.setForeground(Color.BLACK); // Đặt màu chữ là đen
 		txtThongbao.setHorizontalAlignment(JTextField.CENTER); // Căn giữa nội dung của vùng văn bản
