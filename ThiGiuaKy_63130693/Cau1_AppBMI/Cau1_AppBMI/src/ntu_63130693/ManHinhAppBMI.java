@@ -120,6 +120,9 @@ public class ManHinhAppBMI extends JFrame {
 		String str_Cannang = txtCannang.getText();
 		String str_Chieucao = txtChieucao.getText();
 		
-		
+		//chuyển đổi từ dạng chuỗi sang kiểu double
+			Double Cannang = Double.parseDouble(str_Cannang);
+			Double Chieucao = Double.parseDouble(str_Chieucao);
+				
 	}
 }
