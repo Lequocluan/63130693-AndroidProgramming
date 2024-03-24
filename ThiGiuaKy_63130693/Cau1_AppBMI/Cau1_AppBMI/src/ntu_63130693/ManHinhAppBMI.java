@@ -78,6 +78,11 @@ public class ManHinhAppBMI extends JFrame {
 		panel.add(btnClaerChieucao);
 		
 		JButton btnTinh = new JButton("Tính BMI");
+		btnTinh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TinhBMI();
+			}
+		});
 		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnTinh.setBounds(49, 186, 169, 28);
 		contentPane.add(btnTinh);
@@ -109,6 +114,12 @@ public class ManHinhAppBMI extends JFrame {
 		panel_1.add(txtThongbao);
 		txtThongbao.setColumns(10);
 	}
+
+	public void TinhBMI() {
+//		lấy gtri Cannang va Chieucao dưới dạng chuỗi
+		String str_Cannang = txtCannang.getText();
+		String str_Chieucao = txtChieucao.getText();
+		
 		
 	}
 }
