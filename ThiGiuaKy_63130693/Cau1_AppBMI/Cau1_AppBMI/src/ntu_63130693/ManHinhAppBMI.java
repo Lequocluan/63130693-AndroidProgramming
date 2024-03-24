@@ -107,7 +107,7 @@ public class ManHinhAppBMI extends JFrame {
 			}
 		});
 		btnReset.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btnReset.setBounds(228, 189, 89, 23);
+		btnReset.setBounds(228, 186, 89, 28);
 		contentPane.add(btnReset);
 		
 		JPanel panel_1 = new JPanel();
@@ -166,12 +166,17 @@ public class ManHinhAppBMI extends JFrame {
 			
 			//xử lý thông báo tình trạng cơ thể dựa vào chỉ số BMI
 			if(bmi < 18.5) {
+				txtThongbao.setForeground(Color.ORANGE);
 				txtThongbao.setText("Bạn đang ở trạng thái thiếu cân" );
+				
 			}else if(bmi < 25) {
+				txtThongbao.setForeground(Color.BLUE);
 				txtThongbao.setText("Bạn đang ở trạng thái bình thường");
 			}else if(bmi <30) {
+				txtThongbao.setForeground(Color.CYAN);
 				txtThongbao.setText("Bạn đang ở trạng thái thừa cân");
 			}else if(bmi >30) {
+				txtThongbao.setForeground(Color.RED);
 				txtThongbao.setText("Bạn đang ở trạng thái béo phì");
 			}
 		}catch(NumberFormatException  ex) {
