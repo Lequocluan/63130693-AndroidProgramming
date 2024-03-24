@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
 
 public class ManHinhAppBMI extends JFrame {
 
@@ -40,10 +41,10 @@ public class ManHinhAppBMI extends JFrame {
 		lblNewLabel.setBounds(10, 25, 60, 20);
 		panel.add(lblNewLabel);
 		
-		JLabel lblChiuCao = new JLabel("Chiều cao");
-		lblChiuCao.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblChiuCao.setBounds(10, 70, 60, 20);
-		panel.add(lblChiuCao);
+		JLabel lblChieuCao = new JLabel("Chiều cao");
+		lblChieuCao.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblChieuCao.setBounds(10, 70, 60, 20);
+		panel.add(lblChieuCao);
 		
 		txtCannang = new JTextField();
 		txtCannang.setColumns(10);
@@ -109,13 +110,13 @@ public class ManHinhAppBMI extends JFrame {
 		txtKQ.setColumns(10);
 		
 		txtThongbao = new JTextField();
-		txtThongbao.setEditable(false);
-		txtThongbao.setBounds(27, 65, 188, 37);
+		txtThongbao.setBounds(0, 81, 247, 32);
 		panel_1.add(txtThongbao);
 		txtThongbao.setColumns(10);
 	}
 
 	public void TinhBMI() {
+
 //		lấy gtri Cannang va Chieucao dưới dạng chuỗi
 		String str_Cannang = txtCannang.getText();
 		String str_Chieucao = txtChieucao.getText();
@@ -124,5 +125,10 @@ public class ManHinhAppBMI extends JFrame {
 			Double Cannang = Double.parseDouble(str_Cannang);
 			Double Chieucao = Double.parseDouble(str_Chieucao);
 				
+			//tính BMI
+			float bmi = (float)(Cannang/(Chieucao*Chieucao));
+			txtKQ.setText(String.valueOf(bmi));
+			
+			
 	}
 }
