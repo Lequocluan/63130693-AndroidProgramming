@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -89,6 +91,15 @@ public class ManHinhAppBMI extends JFrame {
 		contentPane.add(btnTinh);
 		
 		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtChieucao.setText(null);
+				txtCannang.setText(null);
+				txtCannang.requestFocus();
+				txtThongbao.setText(null);
+				txtKQ.setText(null);
+			}
+		});
 		btnReset.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnReset.setBounds(228, 189, 89, 23);
 		contentPane.add(btnReset);
@@ -121,6 +132,11 @@ public class ManHinhAppBMI extends JFrame {
 		String str_Cannang = txtCannang.getText();
 		String str_Chieucao = txtChieucao.getText();
 		
+		//xử lý khi dữ liệu trống
+		if(str_Cannang.isEmpty() || str_Chieucao.isEmpty()) {
+			JOptionPane.showMessageDialog(this, "Cân nặng hoặc chiều cao không được để trống");
+			return;
+		}
 		//chuyển đổi từ dạng chuỗi sang kiểu double
 			Double Cannang = Double.parseDouble(str_Cannang);
 			Double Chieucao = Double.parseDouble(str_Chieucao);
