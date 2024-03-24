@@ -74,6 +74,7 @@ public class ManHinhAppBMI extends JFrame {
 			}
 		});
 		btnClearCannang.setBounds(188, 21, 53, 31);
+		btnClearCannang.setToolTipText("Xóa trường cân nặng"); // Đặt ghi chú cho nút xóa trường cân nặng
 		panel.add(btnClearCannang);
 		
 		JButton btnClearChieucao = new JButton("x");
@@ -82,6 +83,7 @@ public class ManHinhAppBMI extends JFrame {
 		btnClearChieucao.setContentAreaFilled(false);
 		btnClearChieucao.setBorderPainted(false);
 		btnClearChieucao.setBounds(188, 70, 53, 31);
+		btnClearChieucao.setToolTipText("Xóa trường chiều cao"); // Đặt ghi chú cho nút xóa trường chiều cao
 		panel.add(btnClearChieucao);
 		
 		JButton btnTinh = new JButton("Tính BMI");
