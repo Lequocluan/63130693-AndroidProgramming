@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- button_like_background.xml -->
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Màu nền bên ngoài trái tim -->
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="#C6B9B9"/>
-        </shape>
-    </item>
-    <!-- Vector drawable của trái tim -->
-    <item>
-        <vector
-            android:width="40dp"
-            android:height="40dp"
-            android:viewportWidth="24.0"
-            android:viewportHeight="24.0">
-            <path
-                android:fillColor="#EFE6E6"
-                android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z"/>
-        </vector>
-    </item>
-</layer-list>
+<!-- res/drawable/heart_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Khi nút được nhấn -->
+    <item android:state_pressed="true" android:drawable="@drawable/heart_pressed" />
+    <!-- Trạng thái mặc định -->
+    <item android:drawable="@drawable/btn_like_default" />
+</selector>
+
 
 
