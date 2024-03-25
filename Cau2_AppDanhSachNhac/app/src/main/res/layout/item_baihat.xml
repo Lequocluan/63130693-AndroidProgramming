@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <LinearLayout
-            android:layout_width="280dp"
+            android:layout_width="210dp"
             android:layout_height="50dp"
             android:orientation="vertical">
 
@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:text="TÊN BÀI HÁT"
-                android:textSize="20dp">
+                android:textSize="15dp">
 
             </TextView>
             <TextView
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:text="Nguyễ Trần Trung Quân"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:layout_marginTop="1dp">
 
             </TextView>
@@ -58,7 +58,7 @@
             android:layout_gravity="center"
             android:clickable="true"
             android:focusable="true"
-            android:background="C6B9B9">
+            android:background="@color/light_gray">
 
         </TextView>
     </LinearLayout>

@@ -7,7 +7,7 @@ public class BaiHat {
     private int anh_YeuThich;
     private int anh_luaChon;
 
-    public BaiHat(String tenBaiHat, String tenCaSi, int avt_BaiHat, int anh_YeuThich, int anh_luaChon) {
+    public BaiHat( int avt_BaiHat, String tenBaiHat, String tenCaSi, int anh_YeuThich, int anh_luaChon) {
         this.tenBaiHat = tenBaiHat;
         this.tenCaSi = tenCaSi;
         this.avt_BaiHat = avt_BaiHat;

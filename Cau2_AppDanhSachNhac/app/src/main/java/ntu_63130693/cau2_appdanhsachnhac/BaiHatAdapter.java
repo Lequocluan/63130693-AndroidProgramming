@@ -1,4 +1,4 @@
-
+package ntu_63130693.cau2_appdanhsachnhac;
 
 import android.content.Context;
 import android.icu.util.RangeValueIterator;
@@ -68,6 +68,14 @@ public class BaiHatAdapter extends BaseAdapter {
             textView_BaiHat.setText(BaiHatHienTai.getTenBaiHat());
             textView_CaSi.setText(BaiHatHienTai.getTenCaSi());
             img_avt_BaiHat.setImageResource(BaiHatHienTai.getAvt_BaiHat());
+            imbtn_btn_likeMusic.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Xử lý sự kiện khi nút like được nhấn
+                    Toast.makeText(context, "Đã thêm vào danh sách yêu thích của bạn", Toast.LENGTH_SHORT).show();
+                    // Ví dụ: thêm bài hát vào danh sách yêu thích, cập nhật trạng thái yêu thích, v.v.
+                }
+            });
 
             // Thêm sự kiện click cho nút more
             textView_btn_more.setOnClickListener(new View.OnClickListener() {
