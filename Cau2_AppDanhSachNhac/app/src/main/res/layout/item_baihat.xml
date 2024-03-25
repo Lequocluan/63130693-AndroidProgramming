@@ -33,7 +33,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:text="Nguyễ Trần Trung Quân"
-                android:textSize="20dp">
+                android:textSize="18dp"
+                android:layout_marginTop="1dp">
 
             </TextView>
         </LinearLayout>
