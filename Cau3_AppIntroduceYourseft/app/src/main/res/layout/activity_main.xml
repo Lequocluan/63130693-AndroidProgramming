@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
@@ -19,14 +20,44 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="164dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="103dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avtmuon" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="164dp"
-        android:layout_height="128dp"
-        app:srcCompat="@drawable/avtmuon"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="26dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="115dp"
+            android:text="Lê Quốc Luân"
+            android:textColor="#3F51B5"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="146dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
