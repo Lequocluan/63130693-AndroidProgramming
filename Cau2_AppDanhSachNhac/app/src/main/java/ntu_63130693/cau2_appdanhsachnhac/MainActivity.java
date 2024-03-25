@@ -30,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
         BaiHat bh8= new BaiHat(R.drawable.ncts,"Chúng ta của hiện tại nâng chén tiêu sau", "Sơn Tùng MTP & Bích Phương", R.drawable.btn_like_default, R.drawable.mores);
         BaiHat bh9= new BaiHat(R.drawable.atenv,"Anh thich em nhu vay", "Song Luan", R.drawable.btn_like_default, R.drawable.mores);
         BaiHat bh10= new BaiHat(R.drawable.alnv,"Anh luôn như vậy", "B Ray", R.drawable.btn_like_default, R.drawable.mores);
-
+        dsBaiHat.add(bh1);
+        dsBaiHat.add(bh2);
+        dsBaiHat.add(bh3);
+        dsBaiHat.add(bh4);
+        dsBaiHat.add(bh5);
+        dsBaiHat.add(bh6);
+        dsBaiHat.add(bh7);
+        dsBaiHat.add(bh8);
+        dsBaiHat.add(bh9);
+        dsBaiHat.add(bh10);
 
     }
 }
