@@ -31,7 +31,7 @@ public class ManHinhAppBMI extends JFrame {
 		contentPane = new JPanel();
 		setBounds(100, 100, 400, 427);
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        contentPane.setBackground(new Color(255, 192, 203)); // Màu hồng
+        contentPane.setBackground(new Color(255, 192, 203)); 
         setContentPane(contentPane);
         contentPane.setLayout(null);
 		
@@ -64,7 +64,8 @@ public class ManHinhAppBMI extends JFrame {
 		JButton btnClearCannang = new JButton("x");
 		btnClearCannang.setFont(new Font("Tahoma", Font.BOLD, 13));
 		// Đặt font chữ đậm
-		btnClearCannang.setForeground(Color.RED); // Đặt màu chữ là đỏ
+		btnClearCannang.setForeground(Color.RED); 
+		// Đặt màu chữ là đỏ
 		btnClearCannang.setBorderPainted(false);
 		btnClearCannang.setContentAreaFilled(false);
 		btnClearCannang.addActionListener(new ActionListener() {
@@ -74,16 +75,24 @@ public class ManHinhAppBMI extends JFrame {
 			}
 		});
 		btnClearCannang.setBounds(188, 21, 53, 31);
-		btnClearCannang.setToolTipText("Xóa trường cân nặng"); // Đặt ghi chú cho nút xóa trường cân nặng
+		// Đặt ghi chú cho nút xóa trường cân nặng
+		btnClearCannang.setToolTipText("Xóa trường cân nặng"); 
 		panel.add(btnClearCannang);
 		
 		JButton btnClearChieucao = new JButton("x");
+		btnClearChieucao.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtChieucao.setText(null);
+				txtChieucao.requestFocus();
+			}
+		});
 		btnClearChieucao.setForeground(Color.RED);
 		btnClearChieucao.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btnClearChieucao.setContentAreaFilled(false);
 		btnClearChieucao.setBorderPainted(false);
 		btnClearChieucao.setBounds(188, 70, 53, 31);
-		btnClearChieucao.setToolTipText("Xóa trường chiều cao"); // Đặt ghi chú cho nút xóa trường chiều cao
+		// Đặt ghi chú cho nút xóa trường chiều cao
+		btnClearChieucao.setToolTipText("Xóa trường chiều cao"); 
 		panel.add(btnClearChieucao);
 		
 		JButton btnTinh = new JButton("Tính BMI");
@@ -129,9 +138,10 @@ public class ManHinhAppBMI extends JFrame {
 		
 		txtThongbao = new JTextField();
 		txtThongbao.setEditable(false);txtThongbao.setBorder(null);
-		txtThongbao.setFont(new Font("Tahoma", Font.BOLD, 13)); // Đặt font, in đậm, kích thước 13
-		txtThongbao.setForeground(Color.BLACK); // Đặt màu chữ là đen
-		txtThongbao.setHorizontalAlignment(JTextField.CENTER); // Căn giữa nội dung của vùng văn bản
+		txtThongbao.setFont(new Font("Tahoma", Font.BOLD, 13)); 
+		txtThongbao.setForeground(Color.BLACK); 
+		// Căn giữa nội dung của vùng văn bản
+		txtThongbao.setHorizontalAlignment(JTextField.CENTER); 
 
 		txtThongbao.setBounds(0, 81, 247, 32);
 		panel_1.add(txtThongbao);
