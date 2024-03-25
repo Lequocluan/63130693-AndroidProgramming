@@ -10,4 +10,25 @@
         android:layout_marginTop="3dp">
 
     </ImageView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tenBaiHat"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="TÊN BÀI HÁT"
+            android:textSize="20dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tenCasi"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text=""
+            android:textSize="20dp">
+
+        </TextView>
+    </LinearLayout>
 </LinearLayout>
