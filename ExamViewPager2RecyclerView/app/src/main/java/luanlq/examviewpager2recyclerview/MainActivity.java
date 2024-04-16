@@ -9,6 +9,10 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    LandScapeAdapter landScapeAdapter;
+    ArrayList<LandScape> viewPagerData;
+    ViewPager2 viewPager2Land;
+
 
 
     @Override
