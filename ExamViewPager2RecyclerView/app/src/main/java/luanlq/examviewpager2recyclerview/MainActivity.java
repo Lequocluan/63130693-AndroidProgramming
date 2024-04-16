@@ -8,7 +8,6 @@ import android.os.Bundle;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     LandScapeAdapter landScapeAdapter;
     ArrayList<LandScape> viewPagerData;
     ViewPager2 viewPager2Land;
@@ -19,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        viewPagerData = getDataForViewPager();
+        viewPager2Land = findViewById(R.id.vp2Land);
+        landScapeAdapter = new LandScapeAdapter(this, viewPagerData);
+        viewPager2Land.setAdapter(landScapeAdapter);
 
     }
     ArrayList<LandScape> getDataForViewPager(){
