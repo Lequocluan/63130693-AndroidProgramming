@@ -22,7 +22,22 @@ public class MainActivity extends AppCompatActivity {
         viewPager2Land = findViewById(R.id.vp2Land);
         landScapeAdapter = new LandScapeAdapter(this, viewPagerData);
         viewPager2Land.setAdapter(landScapeAdapter);
+        viewPager2Land.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
 
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+        });
     }
     ArrayList<LandScape> getDataForViewPager(){
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
