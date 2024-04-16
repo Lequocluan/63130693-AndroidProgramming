@@ -17,4 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
+    ArrayList<LandScape> getDataForViewPager(){
+        ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
+        LandScape landScape1 = new LandScape("muidien", "mũi điện");
+        dsDuLieu.add(landScape1);
+        dsDuLieu.add(new LandScape("thienvientruclam", "Thiền viện trúc lâm"));
+        dsDuLieu.add(new LandScape("eiffel", "Tháp Eiffel"));
+        dsDuLieu.add(new LandScape("nuidabia", "Núi đá bia"));
+        dsDuLieu.add(new LandScape("nuidabia", "Núi đá bia"));
+        return dsDuLieu;
+    }
 }
