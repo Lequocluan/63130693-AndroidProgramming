@@ -17,10 +17,25 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Button btnLogin = findViewById(R.id.btnLogin);
-        EditText txtUser = findViewById(R.id.txtUser);
-        EditText txtUserEmail = findViewById(R.id.txtUserEmail);
-        EditText txtPassword = findViewById(R.id.txtPassword);
+        // Ánh xạ các view
+        btnLogin = findViewById(R.id.btnLogin);
+        txtUser = findViewById(R.id.txtUser);
+        txtUserEmail = findViewById(R.id.txtUserEmail);
+        txtPassword = findViewById(R.id.txtPassword);
+    }
 
+    public void DangNhap(View v) {
+        String user = txtUser.getText().toString();
+        String email = txtUserEmail.getText().toString();
+        String password = txtPassword.getText().toString();
+
+        if (user.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin bao gồm: username, useremail, password", Toast.LENGTH_SHORT).show();
+        } else if (user.equals("63CNTT2") && password.equals("12345678")) {
+            Intent iTrangChaoMung = new Intent(this, HomeActivity.class);
+            startActivity(iTrangChaoMung);
+        } else {
+            Toast.makeText(this, "Sai tên người dùng hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+        }
     }
 }
