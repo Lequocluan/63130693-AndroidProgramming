@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin bao gồm: username, useremail, password", Toast.LENGTH_SHORT).show();
         } else if (user.equals("63CNTT2") && password.equals("12345678")) {
             Intent iTrangChaoMung = new Intent(this, HomeActivity.class);
+            iTrangChaoMung.putExtra("USERNAME", user);
             startActivity(iTrangChaoMung);
         } else {
             Toast.makeText(this, "Sai tên người dùng hoặc mật khẩu", Toast.LENGTH_SHORT).show();
