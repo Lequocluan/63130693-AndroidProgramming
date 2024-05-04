@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+        <Button
+            android:id="@+id/btnNhapLieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MỞ MÀN HÌNH NHẬP LIỆU"
+            android:gravity="center"
+            android:background="@drawable/buttonnew"
+            android:onClick="NhapLieu"
+            android:textColor="#DC2E2727"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvDuLieu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DAC8C8"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:text="DỮ LIÊ NHẬN ĐƯỢC TỪ ACTIVITY NHẬP LIỆU">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Họ và tên nhận được"></TextView>
+            <TextView
+                android:id="@+id/tvHoTen"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text=""></TextView>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Năm sinh nhận được"></TextView>
+        <TextView
+            android:id="@+id/tvNamSinh"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text=""></TextView>
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
