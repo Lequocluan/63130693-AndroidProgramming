@@ -1,5 +1,9 @@
 package luanlq.myapplication;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.TextViewKt;
 
@@ -10,35 +14,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    TextView tvHoten, tvNamsinh;
+    private ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult o) {
+            if(o.getResultCode() == RESULT_OK){
+                Intent iNhap = o.getData();
+                tvHoten.setText(iNhap.getStringExtra("hoTen"));
+                tvNamsinh.setText(iNhap.getStringExtra("namSinh"));
+            }
+            else Toast.makeText(MainActivity.this, "Trả về thất bại", Toast.LENGTH_SHORT).show();
+        }
+    });
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
+        tvHoten = findViewById(R.id.tvHoTen);
+        tvNamsinh = findViewById(R.id.tvNamSinh);
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == 8000) {
-            if(resultCode == RESULT_OK) {
-                String hoTenNhanDuoc = data.getStringExtra("HT");
-                int namSinhNhanDuoc = data.getIntExtra("NS", 2022); // Đảm bảo bạn đã sử dụng "NS" ở đây
-                TextView tvHT = findViewById(R.id.tvHoTen);
-                TextView tvNS = findViewById(R.id.tvNamSinh);
-                tvHT.setText(hoTenNhanDuoc);
-                tvNS.setText(String.valueOf(namSinhNhanDuoc));
-            } else {
-                Toast.makeText(this, "Trả về thất bại", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
-
-    public void NhapLieu(View v){
-        Intent iNhap = new Intent(this, ActivityNhapLieu.class);
-        startActivityForResult(iNhap, 8000);
+    public void MoManHinhNhapLieu(View v){
+        Intent iNhapLieu = new Intent(this, ActivityNhapLieu.class);
+        activityResultLauncher.launch(iNhapLieu);
     }
 }

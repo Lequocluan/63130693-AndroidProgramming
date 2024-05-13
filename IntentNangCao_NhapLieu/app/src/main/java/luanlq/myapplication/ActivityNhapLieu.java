@@ -5,34 +5,54 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 
 public class ActivityNhapLieu extends AppCompatActivity {
-
-    EditText edHT ;
-    EditText edNS  ;
+    Button btnNhap, btnDong;
+    EditText edtTen, edtNamSinh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nhap_lieu);
-        edNS  = (EditText) findViewById(R.id.edNamSinh);
-        edHT  = (EditText) findViewById(R.id.edHoTen);
+        init();
+        btnNhap.setOnClickListener(setData);
+        btnDong.setOnClickListener(cancle);
+
     }
-    public void NhapQuayVe(View v){
 
-        String txtHoTen = edHT.getText().toString();
-        int txtNamSinh = Integer.parseInt(edNS.getText().toString());
+    View.OnClickListener setData = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String ten = edtTen.getText().toString();
+            String nam = edtNamSinh.getText().toString();
+            if(ten.isEmpty() || nam.isEmpty()){
+                Toast.makeText(ActivityNhapLieu.this, "Chưa nhập dữ liệu!", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Intent iSet = new Intent();
+                iSet.putExtra("hoTen", ten);
+                iSet.putExtra("namSinh", nam);
+                setResult(RESULT_OK, iSet);
+                finish();
+            }
+        }
+    };
 
-        Intent iNhapLieu = new Intent();
-
-        iNhapLieu.putExtra("HT", txtHoTen);
-        iNhapLieu.putExtra("NS", txtNamSinh);
-
-        setResult(RESULT_OK, iNhapLieu);
-        finish();
-    }
-    public void cancel(View v){
-        edHT.setText("");
-        edNS.setText("");
+    View.OnClickListener cancle = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            edtTen.setText("");
+            edtNamSinh.setText("");
+            edtTen.requestFocus();
+        }
+    };
+    public void init(){
+        btnNhap = findViewById(R.id.btnNhap);
+        btnDong = findViewById(R.id.btnDong);
+        edtTen = findViewById(R.id.edHoTen);
+        edtNamSinh = findViewById(R.id.edNamSinh);
     }
 }

@@ -19,7 +19,7 @@
             android:text="MỞ MÀN HÌNH NHẬP LIỆU"
             android:gravity="center"
             android:background="@drawable/buttonnew"
-            android:onClick="NhapLieu"
+            android:onClick="MoManHinhNhapLieu"
             android:textColor="#DC2E2727"></Button>
     </LinearLayout>
     <LinearLayout
@@ -37,7 +37,7 @@
             android:layout_marginRight="20dp"
             android:gravity="center"
             android:textSize="16dp"
-            android:text="DỮ LIÊ NHẬN ĐƯỢC TỪ ACTIVITY NHẬP LIỆU">
+            android:text="DỮ LIỆU NHẬN ĐƯỢC TỪ ACTIVITY NHẬP LIỆU">
 
         </TextView>
         <LinearLayout

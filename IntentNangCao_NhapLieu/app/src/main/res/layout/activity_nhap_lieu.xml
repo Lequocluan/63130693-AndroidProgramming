@@ -57,7 +57,7 @@
             android:text="Nhập" />
 
         <Button
-            android:id="@+id/btnHuy"
+            android:id="@+id/btnDong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15dp"
