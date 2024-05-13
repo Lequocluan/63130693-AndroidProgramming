@@ -19,8 +19,8 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         Landscape item_selected = ds.get(position);
-        FirstLandscapeFragment firstLandscapeFragment = new FirstLandscapeFragment(item_selected);
-        return firstLandscapeFragment;
+        OneFragment_Landscape oneFragmentLandscape = new OneFragment_Landscape(item_selected);
+        return oneFragmentLandscape;
     }
 
     @Override

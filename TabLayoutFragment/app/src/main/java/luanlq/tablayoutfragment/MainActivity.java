@@ -55,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Landscape> getDataViewPager2(){
         ArrayList<Landscape> dsDuLieu = new ArrayList<>();
-        dsDuLieu.add(new Landscape("Hồ Chí Minh", R.drawable.hochiminh));
-        dsDuLieu.add(new Landscape("Đà Lạt", R.drawable.dalat));
-        dsDuLieu.add(new Landscape("Hạ Long Bay", R.drawable.halongbay));
-        dsDuLieu.add(new Landscape("Hội An", R.drawable.hoian));
-        dsDuLieu.add(new Landscape("Nha Trang", R.drawable.nhatrang));
+        dsDuLieu.add(new Landscape("Cát bà", R.drawable.catba));
+        dsDuLieu.add(new Landscape("Mũi Điện Phú Yên", R.drawable.muidien));
+        dsDuLieu.add(new Landscape("Núi Bà Đen", R.drawable.nuibaden));
+        dsDuLieu.add(new Landscape("Phú Quốc", R.drawable.phuquoc));
+        dsDuLieu.add(new Landscape("Vinpearl", R.drawable.vinpearl));
         dsDuLieu.add(new Landscape("Phong Nha Kẻ Bàng", R.drawable.phongnhakebang));
         return dsDuLieu;
     }
