@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
     ArrayList<Landscape> getDataViewPager2(){
         ArrayList<Landscape> dsDuLieu = new ArrayList<>();
         dsDuLieu.add(new Landscape("Cát bà", R.drawable.catba));
