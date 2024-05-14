@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "luanlq.sqlite"
+    namespace = "luanlq.usingsqlite"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "luanlq.sqlite"
+        applicationId = "luanlq.usingsqlite"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

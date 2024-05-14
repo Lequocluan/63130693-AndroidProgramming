@@ -1,4 +1,4 @@
-package luanlq.sqlite;
+package luanlq.usingsqlite;
 
 import org.junit.Test;
 
