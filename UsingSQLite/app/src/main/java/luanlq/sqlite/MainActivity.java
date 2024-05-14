@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
         database.execSQL(xoaBang);
         database.execSQL(taoBang);
 
-        String sqlThem1 = "INSERT INTO SinhVien VALUES (63132681, 'Lê Văn Tiến', '63.CNTT-3', 'Giỏi')";
+        String sqlThem1 = "INSERT INTO SinhVien VALUES (63132681, 'Lê Quốc Luân', '63.CNTT-3', 'Giỏi')";
         String sqlThem2 = "INSERT INTO SinhVien VALUES (1123214, 'Lê Văn A', '63.CNTT-2', 'Khá')";
         String sqlThem3 = "INSERT INTO SinhVien VALUES (4252, 'Lê Văn B', '63.CNTT-4', 'Trung bình')";
         String sqlThem4 = "INSERT INTO SinhVien VALUES (1543, 'Lê Văn C', '63.CNTT-5', 'Giỏi')";
-        String sqlThem5 = "INSERT INTO SinhVien VALUES (41235, 'Lê Văn E', '63.CNTT-2', 'Giỏi')";
-        String sqlThem6 = "INSERT INTO SinhVien VALUES (1512, 'Lê Văn F', '63.CNTT-3', 'Giỏi')";
-        String sqlThem7 = "INSERT INTO SinhVien VALUES (5735, 'Lê Văn G', '63.CNTT-4', 'Giỏi')";
-        String sqlThem8 = "INSERT INTO SinhVien VALUES (9572, 'Lê Văn H', '63.CNTT-1', 'Giỏi')";
+        String sqlThem5 = "INSERT INTO SinhVien VALUES (63132681, 'Lê Quốc Luân', '63.CNTT-3', 'Giỏi')";
+        String sqlThem6 = "INSERT INTO SinhVien VALUES (1123214, 'Lê Văn A', '63.CNTT-2', 'Khá')";
+        String sqlThem7 = "INSERT INTO SinhVien VALUES (63132681, 'Lê Quốc Luân', '63.CNTT-3', 'Giỏi')";
+        String sqlThem8 = "INSERT INTO SinhVien VALUES (1123214, 'Lê Văn A', '63.CNTT-2', 'Khá')";
         database.execSQL(sqlThem1);
         database.execSQL(sqlThem2);
         database.execSQL(sqlThem3);
