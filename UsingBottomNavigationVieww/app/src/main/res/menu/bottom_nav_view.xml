@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
         <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/home"
-            android:icon="@drawable/home"
-            android:title="home"/>
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
         <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/profile"
-            android:icon="@drawable/profile"
-            android:title="profile"/>
+            android:icon="@drawable/baseline_person_24"
+            android:title="Profile" />
         <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/setting"
-            android:icon="@drawable/setting"
-            android:title="setting"/>
+            android:icon="@drawable/baseline_settings_24"
+            android:title="Setting" />
 </menu>
