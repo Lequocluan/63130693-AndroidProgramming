@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "NavigationDrawer"
 include(":app")
 include(":app")
- 
+include(":app")

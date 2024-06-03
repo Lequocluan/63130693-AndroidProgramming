@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1234"></TextView>
+                android:text="Followers"></TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="80dp"
@@ -62,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1234"></TextView>
+                android:text="Followed"></TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="80dp"
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1234"></TextView>
+                android:text="Views"></TextView>
         </LinearLayout>
     </LinearLayout>
 
@@ -100,7 +100,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0394556714"></TextView>
+                android:layout_gravity="center"
+                android:text="quocluan15102003@gmail.com"></TextView>
         </LinearLayout>
         <LinearLayout
         android:layout_width="wrap_content"
@@ -114,6 +115,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="0394556714"></TextView>
     </LinearLayout>
         <LinearLayout
@@ -128,7 +130,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0394556714"></TextView>
+                android:layout_gravity="center"
+                android:text="Phú Hòa - Phú Yên"></TextView>
         </LinearLayout>
     </LinearLayout>
 
